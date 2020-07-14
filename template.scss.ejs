@@ -1,0 +1,9 @@
+
+<% fontFiles.forEach(file => { %>
+  @font-face {
+    font-family:"<%= file.fileName %>";
+    font-style: <%= file.weightAndStyle %>,
+    font-weight: <%= file.weightAndStyle %>,
+    src: url("#{$path-fonts}<%= file.file %>") format("<%= file.fileType %>"),
+  }
+<% }) %>
